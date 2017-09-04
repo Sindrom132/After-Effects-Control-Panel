@@ -1,5 +1,5 @@
 #include "library/myModalWindows.jsx";
-var gimmePath = "C:\\Users\\AslanZubairaev\\Documents\\myProject\\QuickPanel\\src\\library\\addScripts\\rd_GimmePropPath.jsx";
+var gimmePath = 'C:\\Users\\aslan\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\library\\addScripts\\rd_GimmePropPath.jsx';
 
 ﻿var EffectsNames = {
 	'noise': 'ADBE Noise',

@@ -25,7 +25,7 @@
                 // Adds resource string to panel
 
                 myPanel.grp = myPanel.add(res);
-
+                myPanel.grp.buttonGroup.compositionGroup.nc_button.helpTip = "Hello World!";
                 // DropDownList default selection
 
                 // Assign function to UI elements
