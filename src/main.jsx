@@ -131,6 +131,7 @@
                 myPanel.grp.buttonGroup.expressionGroup.bounce_button.onClick = setBounce.create;
 
                 myPanel.grp.buttonGroup.scriptsGroup.gimme_button.onClick = gimme.runScript;
+                myPanel.grp.buttonGroup.scriptsGroup.scriptList_button.onClick = runScript;
                 //myPanel.grp.buttonGroup.scriptsGroup.gimme_button.onClick =
 
                 myPanel.grp.buttonGroup.settigsGroup.nsSettings_button.onClick = ss;

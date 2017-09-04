@@ -1,6 +1,8 @@
 #include "library/myModalWindows.jsx";
-var gimmePath = 'C:\\Users\\aslan\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\library\\addScripts\\rd_GimmePropPath.jsx'
-var scriptRunner = 'runScriptList.jsx';
+#include "runScriptList.jsx";
+
+var gimmePath = 'C:\\Users\\AslanZubairaev\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\library\\addScripts\\rd_GimmePropPath.jsx';
+var scriptRunner = 'C:\\Users\\AslanZubairaev\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\runScriptList.jsx';
 ﻿var EffectsNames = {
 	'noise': 'ADBE Noise',
 	'hue': 'ADBE HUE SATURATION',
@@ -141,7 +143,6 @@ function checking_and_createFolder(_folder_name){
 function notPlugin(){
 	xAlert("Эффект не установлен");
 };
-
 
 function RUNS (_path){
 	this.runScript = function()
@@ -419,11 +420,12 @@ var addForm = new Add_AE("Form","tc Form",false);
 
 var addLooks = new Add_SE_on_AL("ADBE Glo2-0003");
 
-
-
 // == Scripts Functions ===========================================================================
 
-var scriptList = new RUNS(scriptRunner);
+function runScript(){
+	scriptListRunner();
+};
+
 var gimme = new RUNS(gimmePath);
 
 // == Settings Functions ===========================================================================

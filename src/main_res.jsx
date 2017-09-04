@@ -100,7 +100,7 @@
             scriptsGroup: Panel{\
                 text: 'Scripts', orientation: 'row',\
                 gimme_button: Button{text:'Gimme Prop Path', alignment:['fill','center']},\
-                empty_button: Button{text:'empty', alignment:['fill','center']},\
+                scriptList_button: Button{text:'Other Scripts', alignment:['fill','center']},\
             },\
             systemGroup: Panel{\
                 text: 'Settings', orientation: 'row',\
