@@ -130,7 +130,8 @@
                 myPanel.grp.buttonGroup.expressionGroup.wiggle_button.onClick = setWiggle.create;
                 myPanel.grp.buttonGroup.expressionGroup.bounce_button.onClick = setBounce.create;
 
-                myPanel.grp.buttonGroup.scriptsGroup.gimme_button.onClick = gimmePropPathfunction = runScript;
+                myPanel.grp.buttonGroup.scriptsGroup.gimme_button.onClick = gimme.runScript;
+                //myPanel.grp.buttonGroup.scriptsGroup.gimme_button.onClick =
 
                 myPanel.grp.buttonGroup.settigsGroup.nsSettings_button.onClick = ss;
                 myPanel.grp.buttonGroup.settigsGroup.ncSettings_button.onClick = cs;
