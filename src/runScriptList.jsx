@@ -14,8 +14,8 @@ function scriptListRunner(){
 
 	var w = new Window ("dialog");
 	var myList = w.add ("listbox");
-	myList.size = [200,600]
-
+	myList.size = [300,600]
+	
 	for(var i = 0; i <=scriptList.length-1; i++) {
 	    myList.add("item", scriptList[i].displayName);
 	    totalResult.push(scriptList[i].absoluteURI);
