@@ -1,8 +1,8 @@
 #include "library/myModalWindows.jsx";
 #include "runScriptList.jsx";
 
-var gimmePath = 'C:\\Users\\AslanZubairaev\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\library\\addScripts\\rd_GimmePropPath.jsx';
-var scriptRunner = 'C:\\Users\\AslanZubairaev\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\runScriptList.jsx';
+var gimmePath = 'C:\Program Files\Adobe\Adobe After Effects CC 2015\Support Files\Scripts\ScriptUI Panels\library\addScripts\rd_GimmePropPath.jsx';
+var scriptRunner = 'C:\Users\aslan\Documents\GitHub\After-Effects-Control-Panel\src\runScriptList.jsx';
 ﻿var EffectsNames = {
 	'noise': 'ADBE Noise',
 	'hue': 'ADBE HUE SATURATION',
@@ -152,7 +152,6 @@ function RUNS (_path){
 				eval(scriptFile.read());
 				scriptFile.close();
 			}
-
 };
 
 // == Large Function ===============================================================================
@@ -469,13 +468,5 @@ function enable_time_remapping(){
 
 var setWiggle = new SetExpression(wiggle_exp);
 var setBounce = new SetExpression(bounce_exp);
-
-
-
-
-
-
-
-
 
 // Песочница ======================================================================================
