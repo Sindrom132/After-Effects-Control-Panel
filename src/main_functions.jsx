@@ -1,8 +1,8 @@
 #include "library/myModalWindows.jsx";
 #include "runScriptList.jsx";
 
-var gimmePath = 'C:\Program Files\Adobe\Adobe After Effects CC 2015\Support Files\Scripts\ScriptUI Panels\library\addScripts\rd_GimmePropPath.jsx';
-var scriptRunner = 'C:\Users\aslan\Documents\GitHub\After-Effects-Control-Panel\src\runScriptList.jsx';
+var gimmePath = 'C:\\Users\\AslanZubairaev\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\library\\addScripts\\rd_GimmePropPath.jsx';
+var scriptRunner = 'C:\\Users\\AslanZubairaev\\Documents\\GitHub\\After-Effects-Control-Panel\\src\\runScriptList.jsx';
 ﻿var EffectsNames = {
 	'noise': 'ADBE Noise',
 	'hue': 'ADBE HUE SATURATION',
@@ -37,15 +37,15 @@ function writeString(_string){
 };
 
 function Add_AE(name, property) {
+	//var sel_layer = app.project.activeItem.selectedLayers;
 	this.name = name;
 	this.property = property;
 	this.create = function () {
 		var comp = app.project.activeItem
 		if (comp != null && comp instanceof CompItem) {
 			app.beginUndoGroup("Отмена: Создать Element 3D");
-			var solid = comp.layers.addSolid([1,1,1], name, 1920, 1080, 1, 30);
-			//var effectsGroup = app.project.activeItem.selectedLayers;
-			solid.Effects.addProperty(property);
+			var solid = comp.layers.addSolid([1,1,1], name, comp.width, comp.height, 1, 30);
+			this.effect = solid.Effects.addProperty(property);
 			app.endUndoGroup();
 		}  else {
 			newCompPrompt();
@@ -152,6 +152,7 @@ function RUNS (_path){
 				eval(scriptFile.read());
 				scriptFile.close();
 			}
+
 };
 
 // == Large Function ===============================================================================
@@ -259,12 +260,12 @@ function newcomp(){
 
 function newSolid() {
 	var activeComp = app.project.activeItem;
-	var solid = activeComp.layers.addSolid([1,1,1], "Solid", activeComp.width, activeComp.height, 1, 30);
+	var solid = activeComp.layers.addSolid([1,1,1], "Solid", activeComp.width, activeComp.height, activeComp.pixelAspect, activeComp.duration);
 	writeString(solid);
 };
 
 function newAdjustment() {
-	var adjustment = app.project.activeItem.layers.addSolid([1,1,1], "Adjustment Layer", 1920, 1080, 1, 30);
+	var adjustment = app.project.activeItem.layers.addSolid([1,1,1], "Adjustment Layer", activeComp.width, activeComp.height, activeComp.pixelAspect, activeComp.duration);
 	adjustment.adjustmentLayer = true;
 	writeString(adjustment);
 };
@@ -468,5 +469,13 @@ function enable_time_remapping(){
 
 var setWiggle = new SetExpression(wiggle_exp);
 var setBounce = new SetExpression(bounce_exp);
+
+
+
+
+
+
+
+
 
 // Песочница ======================================================================================

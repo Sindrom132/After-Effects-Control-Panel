@@ -1,4 +1,4 @@
-﻿{
+{
    function myScript(thisObj) {
 
       function shiftState() {
@@ -113,7 +113,15 @@
                 myPanel.grp.buttonGroup.effectsGroup.sEffectsGroup.FLGD.LensBlur_button.onClick = addCameraBlur.create;
                 myPanel.grp.buttonGroup.effectsGroup.sEffectsGroup.FLGD.glow_button.onClick = glow.create;
                 myPanel.grp.buttonGroup.effectsGroup.sEffectsGroup.FLGD.dropShadow_button.onClick = addDropShadow.create;
-                myPanel.grp.buttonGroup.effectsGroup.aEffectGroup.EO.element_button.onClick = addElement.create;
+                myPanel.grp.buttonGroup.effectsGroup.aEffectGroup.EO.element_button.onClick = function(){
+                                                                                                if(addElement.name === "Element") {
+                                                                                                    var sel_layer = app.project.activeItem.selectedLayers;
+                                                                                                    var sel_index = sel_layer[0].index + 1
+                                                                                                    addElement.create();
+                                                                                                    addElement.effect.property("VIDEOCOPILOT 3DArray-1802").setValue(sel_index);
+                                                                                                    sel_layer[0].enabled =  false;
+                                                                                                }
+                                                                                              };
                 myPanel.grp.buttonGroup.effectsGroup.aEffectGroup.EO.opticaFlares_button.onClick = addOpticalFlares.create;
 
                 myPanel.grp.buttonGroup.effectsGroup.aEffectGroup.PFTS.particular_button.onClick = addParticular.create;
